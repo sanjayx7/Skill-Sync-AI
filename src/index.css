@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  min-height: 100vh;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(244,100%,97%,1) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(186,100%,97%,1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(262,100%,98%,1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(220,100%,97%,1) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* visible keyboard focus, kept consistent everywhere */
+:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+::selection {
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+textarea::placeholder, input::placeholder {
+  color: #94a3b8;
+}
